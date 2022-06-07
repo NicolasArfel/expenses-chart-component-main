@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* --- color --- */
+
+:root{
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* --- base --- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+}
+
+/* --- component --- */
+
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+    width: 500px;
+    font-size: 1rem;
+}
+
+/* --- header --- */
+header{
+display: flex;
+justify-content: space-between;
+width: 100%;
+background-color: var(--soft-red);
+border-radius: 10px;
+}
+
+.balance {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 1.5rem;
+} 
+
+.balance__amount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.circle{
+    display: flex;
+    padding: 2rem 1.5rem;
+}
+
+.circle__white{
+    border: 2px solid white;
+    border-radius: 50%;    
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: -1rem;
+    z-index: 1;
+}
+
+.circle__brown{
+    border-radius: 50%;
+    background-color: var(--dark-brown);
+    width: 2.5rem;
+    height: 2.5rem;   
+}
+
+.charts {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.charts__title {
+    font-size: 2rem;
+}
+
+.charts__week {
+    display: flex;
+    justify-content: space-between;
+    height: 230px;
+}
+
+.charts__days {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+
+.charts__amount {
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.3rem;
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    font-weight: 700;
+    position: absolute;
+    top: -2.5rem;
+    left: -0.5rem;
+}
+
+.block{
+    position: relative;
+    background-color: var(--soft-red);
+    margin:0 auto;    
+    border-radius: 5px;
+    width: 3rem;
+}
+
+.charts__days:hover .charts__amount{
+    display:block;
+}
+
+.block:hover {
+    opacity: 0.7;
+}
+
+
+.footer {
+    border-top: 1px solid var(--cream);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.total {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.total__amount {
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.percent {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: end;
+    padding-bottom: 0.3rem;
+}
+
+.percent__amount {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+    .component {
+        width: 95%;
+        
+    }
+    .charts__days {
+        width: 10%;
+    }
+    .block {
+        width: 2.5rem;
+    }
+}
+
+
+/* --- attribution --- */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+  
